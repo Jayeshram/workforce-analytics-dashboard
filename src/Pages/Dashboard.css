@@ -1,0 +1,297 @@
+.dashboard {
+    min-height: 100vh;
+    padding: 40px;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* HEADER */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.dashboard-header p {
+    margin-top: 8px;
+    color: #6b7280;
+}
+
+
+.view-employees-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.view-employees-btn:hover {
+    background: #3730a3;
+}
+
+
+/* ANALYTICS CARDS */
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.analytics-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.analytics-card:hover {
+    transform: translateY(-3px);
+}
+
+.analytics-card h3 {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.analytics-card p {
+    margin: 12px 0 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* CHARTS */
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.chart-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.gender-chart {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* GENERAL SECTION */
+
+.section-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.section-card h2 {
+    margin-top: 0;
+}
+
+
+/* AGE DISTRIBUTION */
+
+.age-list {
+    margin-top: 20px;
+}
+
+.age-row {
+    display: grid;
+    grid-template-columns: 70px 1fr 40px;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.age-label {
+    font-weight: 600;
+}
+
+.age-bar-container {
+    height: 14px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.age-bar {
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 20px;
+}
+
+
+/* INSIGHTS */
+
+.section-title {
+    margin: 25px 0 15px;
+}
+
+.section-title h2 {
+    margin: 0;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.insight-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.insight-label {
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.insight-card h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.insight-card p {
+    margin: 0;
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+
+/* COMPANY DISTRIBUTION */
+
+.company-section {
+    margin-bottom: 0;
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.company-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.company-item span {
+    font-size: 14px;
+}
+
+.company-item strong {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 4px 9px;
+    border-radius: 20px;
+}
+
+
+/* LOADING */
+
+.loading {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f7fb;
+}
+
+
+/* ERROR */
+
+.error-message {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f7fb;
+    color: #dc2626;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .analytics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        padding: 20px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .age-row {
+        grid-template-columns: 55px 1fr 30px;
+        gap: 8px;
+    }
+}
